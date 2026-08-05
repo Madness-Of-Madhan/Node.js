@@ -1,0 +1,2 @@
+npm init -to initiialize package.json
+npm i lodash
