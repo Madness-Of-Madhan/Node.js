@@ -1,2 +1,3 @@
 npm init -to initiialize package.json
 npm i lodash
+npm i nodemon -automatically restart node app

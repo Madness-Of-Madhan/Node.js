@@ -1,0 +1,23 @@
+blocking vs non-bloacking
+synchronous vs asynchronous
+Event Looping-allows to acheive non-blocking
+ basicaly js is synchronous blocking ,single threaded language
+  to make async program we need help of libuv
+   use setInterval,setTimeout,fetch,fs.readFile to delay it.
+
+   11.1--Promises:
+    Yes, conceptually both methods achieve the exact same goal: converting Node.js callback-based functions into native Promises so you can use async/await.
+
+However, in the second snippet, there is a bug that prevents it from working as intended.
+  2. Comparison: require('fs').promises vs. util.promisifyOnce the bug is fixed, both snippets produce identical behavior, but they differ in how they achieve it:Featurerequire('fs').promises (Snippet 1)util.
+  promisify() (Snippet 2)How it worksBuilt directly into Node.js's native fs module. Returns Promise-ready methods natively.A utility wrapper function that manually converts legacy callback functions into Promises.CleanlinessCleaner & modern. No extra setup required.Slightly 
+  more boilerplate. Requires 
+  creating custom wrapper variables (readFilePromise).Use CaseBest for built-in Node modules (fs, dns, stream, etc.) that already have native 
+  Promise APIs.Best for 3rd-party libraries or legacy custom code that only 
+  offer callbacks and don't have built-in Promise support.
+
+  15-streams
+  *writeable
+  *readable
+  *duplex
+  *transform
